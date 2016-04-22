@@ -38,17 +38,18 @@
             <div class="thumbnail">
 
 					<img class="poster" />
-					<div class="imageInfo">%posterindex%</div>
+					<div class="imageInfo"><img ng-src="{{ movies[i].posters[0]}}"/></div>
 					
-					<p class="title">%title% (%country%)</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> %iscore% </p>
-					<p class="runtime">Runtime: %runtime%</p> 
-					<p class="released">Released: %released% | Rated: %rating%</p>
-					<p class="websites">Websites: <a>%imdb%</a> | <a>%website%</a></p>
+					<p class="title">{{ movies[i].title}} ({{ movies[i].country}}) </p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[i].iscore}} </p>
+					<p class="runtime">Runtime:{{ movies[i].runtime}}</p> 
+					<p class="released">Released: {{ movies[i].released | date }} | Rated: {{ movies[i].rating}} </p>
+					<p class="websites">Websites: <a id="imdb" ng-href="{{ movies[i].imdb}}"> IMDB </a> | <a id="website" ng-href="{{ movies[i].website}}"> Website </a></p>
 					
 		            <div class="social">
-		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> %like%</p>
-		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> %dislike%</p>
+		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i>{{ movies[i].likes}}</p>
+		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ movies[i].dislikes}}</p>
+                                       
 		            </div>
             </div> 
         </div>
