@@ -122,8 +122,21 @@ body {
 }
 
 /* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
-
-
-
-
-
+.likes {
+    background: #008700;
+    color: #ffffff;
+}
+.likes:hover {
+    background: #9edd87;
+    color: #008700;
+    transition-duration: 500ms;
+}
+.dislikes {
+    background: #f65a5b;
+    color: #ffffff;
+    transition-duration: 500ms;
+}
+.dislikes:hover {
+    background: #fdd6d6;
+    color: #F65A5B;
+}
