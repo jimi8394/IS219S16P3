@@ -94,13 +94,11 @@ app.controller('HomeController', ['$scope', function($scope) {
   ];
 	
 	
-
-	
 	/* ADD VARIABLES FOR STEP 3 HERE */
 	
-+      $scope.title = "IMDB + Jimmy's Top 8 Movies";
-+      $scope.owner = "Jimmy";
-+      $scope.github = "https://github.com/jimi8394/IS219S16P3";
+    $scope.title = "IMDB + Jimmy's Top 8 Movies";
+    $scope.owner = "Jimmy";
+    $scope.github = "https://github.com/jimi8394/IS219S16P3";
 	
 	
 	/* ADD FUNCTIONS FOR STEP 7 HERE */
@@ -117,7 +115,7 @@ app.controller('HomeController', ['$scope', function($scope) {
         $scope.movies[index].posterindex++;
          if($scope.movies[index].posterindex==$scope.movies[index].posters.length){
                  $scope.movies[index].posterindex=0;
-    }
+    }}
 	
     $scope.timeText=function(minutes){
         $scope.hour=Math.floor(minutes/60);
