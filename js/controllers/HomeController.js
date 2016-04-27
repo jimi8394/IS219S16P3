@@ -88,9 +88,49 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
-	
-	
+	},
+	{ 
+      title:	'Superman', 
+      iscore:	7.3,
+      rating:	'R',
+      runtime:	183,
+      released:	new Date('1978', '12', '15'),
+      country:	'USA',
+      posters:	['img/superman1.jpg','img/superman2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0078346',
+      website:	'http://www.dccomics.com/characters/superman',
+      likes:	1000,
+      dislikes:	100,
+      posterindex: 0
+	},
+    { 
+      title:	'Thor', 
+      iscore:	7.0,
+      rating:	'R',
+      runtime:	115,
+      released:	new Date('2011', '6', '5'),
+      country:	'USA',
+      posters:	['img/thor1.jpg','img/thor2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0800369',
+      website:	'http://marvel.com/movies/movie/36/thor',
+      likes:	1400,
+      dislikes:	50,
+      posterindex: 0
+	},
+    { 
+      title:	'Avenger', 
+      iscore:	8.1,
+      rating:	'R',
+      runtime:	143,
+      released:	new Date('2012', '4', '5'),
+      country:	'USA',
+      posters:	['img/avenger1.jpg','img/avenger2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0848228',
+      website:	'http://marvel.com/characters/68/avengers',
+      likes:	1670,
+      dislikes:	20,
+      posterindex: 0
+	},
   ];
 	
 	
