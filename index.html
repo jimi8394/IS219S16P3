@@ -34,21 +34,22 @@
       
       <div class="container">
 
-        <div class="col-md-6" ng-repeat ="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+         <div class="col-md-6" ng-repeat ="movie in movies" >
+       <!-- <div class="col-md-6" ng-repeat ="i in [0, 1, 2, 3, 4, 5, 6, 7]"> -->
             <div class="thumbnail">
 
-					<img ng-click="posterClick($index)"  class="poster" ng-src=" {{movies[i].posters[movies[i].posterindex]}}"/>
-					<div class="imageInfo">poster{{movies[i].posterindex + 1}} of {{movies[i].posters.length}} </div>
+					<img ng-click="posterClick($index)"  class="poster" ng-src=" {{movies[$index].posters[movies[$index].posterindex]}}"/>
+					<div class="imageInfo">poster{{movies [$index].posterindex + 1}} of {{movies[$index].posters.length}} </div>
 					
-					<p class="title">{{ movies[i].title}} ({{ movies[i].country}}) </p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[i].iscore}} </p>
-					<p class="runtime">Runtime:{{ movies[i].runtime}}</p> 
-					<p class="released">Released: {{ movies[i].released | date }} | Rated: {{ movies[i].rating}} </p>
-					<p class="websites">Websites: <a id="imdb" ng-href="{{ movies[i].imdb}}"> IMDB </a> | <a id="website" ng-href="{{ movies[i].website}}"> Website </a></p>
+					<p class="title">{{ movies[$index].title}} ({{ movies[$index].country}}) </p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[$index].iscore}} </p>
+					<p class="runtime">Runtime:{{ movies[$index].runtime}}</p> 
+					<p class="released">Released: {{ movies[$index].released | date }} | Rated: {{ movies[$index].rating}} </p>
+					<p class="websites">Websites: <a id="imdb" ng-href="{{ movies[$index].imdb}}"> IMDB </a> | <a id="website" ng-href="{{ movies[$index].website}}"> Website </a></p>
 					
 		            <div class="social">
-		              <p ng-click="like($index)" class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i>{{ movies[i].likes}}</p>
-		              <p ng-click="dislike($index)" class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ movies[i].dislikes}}</p>    
+		              <p ng-click="like($index)" class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i>{{ movies[$index].likes}}</p>
+		              <p ng-click="dislike($index)" class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ movies[$index].dislikes}}</p>    
 		            </div>
             </div> 
         </div>
@@ -58,7 +59,7 @@
     <div class="footer" ng-controller="HomeController">
       <div class="container">
 		<a id="github" class="btn btn-lg btn-warning" ng-href="{{github}}">
-			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{owner}}
+			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> View  {{owner}}'s Code
   		</a>
       </div>
     </div>
